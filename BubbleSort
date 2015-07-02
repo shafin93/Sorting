@@ -1,0 +1,60 @@
+#include<stdio.h>
+void bubble_sort(int[],int);
+
+int main()
+{
+    int n,i,t,temp;
+    printf("Enter the value of array size");
+    scanf("%d",&n);
+    //int k=n;
+    int ar[n];
+    printf("\nEnter the values of:");
+
+    for(i=0;i<n;i++)
+    {
+        printf("\nar[%d]:",i);
+        scanf("%d",&ar[i]);
+    }
+
+     bubble_sort(ar, n);
+    printf("\nSorted Bubble:");
+
+     for(i=0;i<n;i++)
+    {
+        printf(" %d\t",ar[i]);
+    }
+
+
+    return 0;
+
+
+}
+
+
+
+void bubble_sort(int Ar[],int N)
+{
+    int k,t,i,temp;
+    k=N;
+     while(k!=0)
+    {
+        t=0;
+        for(i=0;i<N-1;i++)
+        {
+
+            if(Ar[i]>Ar[i+1])
+            {
+                temp=Ar[i];
+                Ar[i]=Ar[i+1];
+                Ar[i+1]=temp;
+                t=i;
+
+            }
+
+        }
+    k=t;
+
+    }
+
+
+}
